@@ -1,0 +1,18 @@
+.background {
+  background-image: url("../../../img/duck.gif");
+  width: 100%;
+  height: 100vh;
+  background-size: 50% contain; /* background half the size of the div */
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
+  padding: 5vh 5%;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  color: white;
+}

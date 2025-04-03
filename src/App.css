@@ -1,4 +1,18 @@
-#root {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* --bs-bg-color: var(--bs-dark); */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: var(--bs-dark) !important;
+  color: var(--bs-light) !important; */
+}
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +53,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
