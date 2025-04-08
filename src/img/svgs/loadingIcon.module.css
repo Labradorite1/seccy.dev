@@ -1,0 +1,186 @@
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.spinner .icon {
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
+  margin: 0 -6px;
+}
+
+.spinner .icon :nth-child(1) {
+  animation: spinner_bits_a 2s linear infinite;
+  -moz-animation: spinner_bits_a 2s linear infinite;
+}
+
+.spinner .icon :nth-child(2) {
+  animation: spinner_bits_b 2s linear infinite;
+  -moz-animation: spinner_bits_b 2s linear infinite;
+}
+
+.spinner .icon :nth-child(3) {
+  animation: spinner_bits_c 2s linear infinite;
+  -moz-animation: spinner_bits_c 2s linear infinite;
+}
+
+.spinner .icon :nth-child(4) {
+  animation: spinner_bits_d 2s linear infinite;
+  -moz-animation: spinner_bits_d 2s linear infinite;
+}
+
+.spinner .icon :nth-child(5) {
+  animation: spinner_bits_e 2s linear infinite;
+  -moz-animation: spinner_bits_e 2s linear infinite;
+}
+
+.spinner .icon :nth-child(6) {
+  animation: spinner_bits_f 2s linear infinite;
+  -moz-animation: spinner_bits_f 2s linear infinite;
+}
+
+@keyframes spinner_bits_a {
+  0% {
+    opacity: 0.5;
+  }
+  16.66667% {
+    opacity: 0;
+  }
+  33.33333% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.66667% {
+    opacity: 0;
+  }
+  83.33333% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner_bits_b {
+  0% {
+    opacity: 0;
+  }
+  16.66667% {
+    opacity: 1;
+  }
+  33.33333% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.66667% {
+    opacity: 0;
+  }
+  83.33333% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner_bits_c {
+  0% {
+    opacity: 0;
+  }
+  16.66667% {
+    opacity: 0;
+  }
+  33.33333% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  66.66667% {
+    opacity: 0;
+  }
+  83.33333% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner_bits_d {
+  0% {
+    opacity: 0;
+  }
+  16.66667% {
+    opacity: 0;
+  }
+  33.33333% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  66.66667% {
+    opacity: 0.5;
+  }
+  83.33333% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner_bits_e {
+  0% {
+    opacity: 0;
+  }
+  16.66667% {
+    opacity: 0;
+  }
+  33.33333% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.66667% {
+    opacity: 1;
+  }
+  83.33333% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner_bits_f {
+  0% {
+    opacity: 0;
+  }
+  16.66667% {
+    opacity: 0;
+  }
+  33.33333% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.66667% {
+    opacity: 0;
+  }
+  83.33333% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

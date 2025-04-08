@@ -3,6 +3,10 @@ import routes from "../../../data/routes";
 import AppRoute from "../../types/AppRoute";
 import { Link } from "react-router-dom";
 import { getOauthUrl } from "../../utilities/oauthUtilities";
+import { getPrimaryMembership } from "../../utilities/profileUtilities";
+import { getBungieNameFromInfoCard } from "../../utilities/bungieNameUtilities";
+import { useAppState } from "../../contexts/AppState";
+import { useEffect } from "react";
 
 export default function Header() {
   const groupedRoutes = Object.values(routes)
@@ -12,8 +16,13 @@ export default function Header() {
       return a;
     }, {});
 
+  const primaryProfile = getPrimaryMembership();
+  const [appState, _] = useAppState();
+
+  useEffect(() => {}, [appState.refreshHeader]);
+
   return (
-    <Navbar expand="lg" sticky="top">
+    <Navbar expand="lg" sticky="top" className="border-bottom border-secondary">
       <Container>
         <Navbar.Brand as={Link} to="/">
           {import.meta.env.VITE_REACT_APP_NAME}
@@ -42,7 +51,13 @@ export default function Header() {
               ))}
           </Nav>
           <Nav>
-            <Nav.Link href={getOauthUrl()}>Login</Nav.Link>
+            {primaryProfile ? (
+              <Nav.Link as={Link} to="/settings">
+                {getBungieNameFromInfoCard(primaryProfile)}
+              </Nav.Link>
+            ) : (
+              <Nav.Link href={getOauthUrl()}>Login</Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

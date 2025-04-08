@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import Router from "./components/router/Router";
@@ -8,11 +7,9 @@ import { AppState } from "./contexts/AppState";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <ErrorBoundary FallbackComponent={({ error }) => error.message}>
-      <AppState>
-        <Router />
-      </AppState>
-    </ErrorBoundary>
-  </StrictMode>
+  <ErrorBoundary FallbackComponent={({ error }) => error.message}>
+    <AppState>
+      <Router />
+    </AppState>
+  </ErrorBoundary>
 );

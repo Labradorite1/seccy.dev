@@ -1,14 +1,14 @@
-import App from "../src/App";
 import Loading from "../src/components/pages/loading/Loading";
 import Homepage from "../src/components/pages/homepage/Homepage";
 import AppRoute from "../src/types/AppRoute";
+import Settings from "../src/components/pages/settings/Settings";
 
 const routes: AppRoute[] = [
   {
     text: "home",
     url: "/*",
     requiresDefinitions: false,
-    element: <App />,
+    element: <Homepage />,
     showInNav: false,
     group: "",
   },
@@ -25,6 +25,14 @@ const routes: AppRoute[] = [
     url: "/home",
     requiresDefinitions: false,
     element: <Homepage />,
+    showInNav: false,
+    group: "",
+  },
+  {
+    text: "settings",
+    url: "/settings",
+    requiresDefinitions: false,
+    element: <Settings />,
     showInNav: false,
     group: "",
   },

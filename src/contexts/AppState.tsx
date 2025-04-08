@@ -4,6 +4,7 @@ import AppStateType from "../types/AppState";
 // The initial state, you can setup any properties initial values here.
 const initialState = {
   header: true,
+  refreshHeader: true,
   toasts: [],
 };
 
