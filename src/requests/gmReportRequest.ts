@@ -1,4 +1,4 @@
-import GMReportSearchResult from "../types/gmReportSearchResult";
+import GMReportSearchResult from "../types/GMReportSearchResult";
 
 async function GMReportSearchPlayer(input: string): Promise<GMReportSearchResult> {
   return await (
