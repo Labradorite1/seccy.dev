@@ -54,7 +54,7 @@ export default function ProfileSearchBox({
   }, [bungieName]);
 
   return (
-    <div className="col col-md-4 col-lg-2 d-flex justify-content-between align-items-center">
+    <div className="col col-md-4 col-lg-3 d-flex justify-content-between align-items-center">
       <FloatingLabel className="flex-fill" label="Bungie name">
         <Form.Control
           isValid={!!bungieName}
