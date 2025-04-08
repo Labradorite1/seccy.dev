@@ -26,7 +26,7 @@ export default function OauthCodeCatcher({ children }: PropsWithChildren) {
 
     await saveProfileToLocalStorage();
 
-    navigate("/");
+    navigate(`${import.meta.env.BASE_URL}`);
     setAppState("refreshHeader", !appState.refreshHeader);
   }
 
