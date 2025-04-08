@@ -63,7 +63,7 @@ async function searchForProfileByBungieName(bungieName: ExactSearchRequest) {
     bungieName
   );
 
-  if (searchByBungieName.Response.length > 0) {
+  if ((searchByBungieName?.Response?.length ?? 0) > 0) {
     return searchByBungieName.Response.find(
       (x) => x.crossSaveOverride === 0 || x.membershipType === x.crossSaveOverride
     )!;
