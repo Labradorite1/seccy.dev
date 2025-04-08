@@ -24,17 +24,17 @@ export default function Header() {
   return (
     <Navbar expand="lg" sticky="top" className="border-bottom border-secondary">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to={`${import.meta.env.BASE_URL}`}>
           {import.meta.env.VITE_REACT_APP_NAME}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to={`${import.meta.env.BASE_URL}`}>
               Home
             </Nav.Link>
             {groupedRoutes[""].map((navItem) => (
-              <Nav.Link as={Link} to={navItem.url}>
+              <Nav.Link as={Link} to={`${import.meta.env.BASE_URL}${navItem.url}`}>
                 {navItem.text}
               </Nav.Link>
             ))}
@@ -43,7 +43,7 @@ export default function Header() {
               .map((navGroup) => (
                 <NavDropdown title={navGroup} id="basic-nav-dropdown">
                   {groupedRoutes[navGroup].map((navItem) => (
-                    <Nav.Link as={Link} to={navItem.url}>
+                    <Nav.Link as={Link} to={`${import.meta.env.BASE_URL}${navItem.url}`}>
                       {navItem.text}
                     </Nav.Link>
                   ))}
