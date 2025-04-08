@@ -23,7 +23,7 @@ jobs:
       - name: Build project
         run: npm run build
         env: 
-          VITE_REACT_APP_NAME: ${{ secrets.VITE_REACT_APP_NAME }}
+          VITE_REACT_APP_NAME: ${{ vars.VITE_REACT_APP_NAME }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
